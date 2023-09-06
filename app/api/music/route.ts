@@ -1,18 +1,21 @@
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
+import { NextApiRequest } from "next"; // Import NextApiRequest type
 import Replicate from "replicate";
 
 import { increaseApiLimit, checkApiLimit } from "@/lib/api-limit";
 
 const replicate = new Replicate({
-  auth: process.env.REPLICATE_API_TOKEN!
+  auth: process.env.REPLICATE_API_TOKEN!,
 });
 
-export async function POST(req) {
+export async function POST(
+  req: Request
+) {
   try {
-    const { userId } = auth(req); // Pass the 'req' object to the auth() function
+    const { userId } = auth();
     const body = await req.json();
-    const { prompt } = body;
+    const { prompt  } = body;
 
     if (!userId) {
       return new NextResponse("Unauthorized", { status: 401 });
@@ -25,7 +28,7 @@ export async function POST(req) {
     const freeTrial = await checkApiLimit();
     
     if (!freeTrial) {
-      return new NextResponse("Free trial haw expired", { status: 403 });
+      return new NextResponse("Free trial has expired", { status: 403 });
     }
 
     const output = await replicate.run(
@@ -39,7 +42,7 @@ export async function POST(req) {
     
     await increaseApiLimit();
 
-    return new NextResponse(JSON.stringify(output)); // Use 'output' instead of 'response'
+    return new NextResponse(JSON.stringify(output));
   } catch (error) {
     console.log('[MUSIC_ERROR]', error);
     return new NextResponse("Internal Error", { status: 500 });

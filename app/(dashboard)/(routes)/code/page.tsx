@@ -12,12 +12,17 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import ChatCompletionRequestMessage from "openai";
 import { Empty } from "@/components/empty";
 import { Loader } from "@/components/loader";
 import { cn } from "@/lib/utils";
 import { UserAvatar } from "@/components/user-avatar";
 import { BotAvatar } from "@/components/bot-avatar";
+
+// Define the ChatCompletionRequestMessage interface
+interface ChatCompletionRequestMessage {
+  role: string;
+  content: string;
+}
 
 const CodePage = () => {
   const router = useRouter();
@@ -34,20 +39,24 @@ const CodePage = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const userMessage: ChatCompletionRequestMessage = { role: "user", content: values.prompt };
+      const userMessage: ChatCompletionRequestMessage = {
+        role: "user",
+        content: values.prompt
+      };
+
       const newMessages = [...messages, userMessage];
-      
+
       const response = await axios.post('/api/code', { messages: newMessages });
       setMessages((current) => [...current, userMessage, response.data]);
 
       form.reset();
     } catch (error: any) {
-      // TODO: Open Pro Model
+      // Handle errors here
       console.log(error);
     } finally {
       router.refresh();
     }
-  };    
+  };   
 
   return (
     <div>
@@ -76,19 +85,19 @@ const CodePage = () => {
                 gap-2   
               "
             >
-              <FormField
-                name="prompt"
-                render={({ field }: { field: UseFormRegister<FieldValues, FieldPath<FieldValues>> }) => (
-                  <FormItem className="col-span-12 lg:col-span-10">
-                    <FormControl className="m-0 p-0">
-                      <Input
-                        className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
-                        disabled={isLoading} 
-                        placeholder="Simple toggle button using react hooks." 
-                        {...field}
-                      />
-                    </FormControl>
-                  </FormItem>
+            <FormField
+              name="prompt"
+              render={({ field }) => (
+                <FormItem className="col-span-12 lg:col-span-10">
+                  <FormControl className="m-0 p-0">
+                    <Input
+                      className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
+                      disabled={isLoading}
+                      placeholder="Enter your prompt here"
+                      {...field}
+                    />
+                  </FormControl>
+                </FormItem>
                 )}
               />
               <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading}>

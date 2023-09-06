@@ -1,16 +1,22 @@
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
-import { OpenAI, ChatCompletionRequestMessage } from "openai";  // Adjust import based on package structure
+import { OpenAI } from "openai"; 
 
 import { increaseApiLimit, checkApiLimit } from "@/lib/api-limit";
 
 
 const openai = new OpenAI();
 
+interface ChatCompletionRequestMessage {
+  role: string;
+  content: string;
+}
+
 const instructionMessage: ChatCompletionRequestMessage = {
   role: "system",
   content: "You are a code generator. You must answer only in markdown code snippets. Use code comments for explanations."
-}
+};
+
 
 export async function POST(req: Request) {
   try {
