@@ -19,7 +19,7 @@ body,
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
  
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 248 90% 66%;
     --primary-foreground: 210 40% 98%;
  
     --secondary: 210 40% 96.1%;
@@ -51,8 +51,8 @@ body,
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
  
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 248 90% 66%;
+    --primary-foreground: 210 40% 98%;
  
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -81,3 +81,73 @@ body,
   }
 }
 
+
+/* My Code */
+
+.custom-btn {
+  background: linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5);
+  background-size: 600%;
+  -webkit-animation: anime 10s linear infinite;
+  animation: anime 10s linear infinite;
+}
+
+
+@-webkit-keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+
+
+.toggle-outer{
+  width:100px;
+  height:50px;
+  background:black;
+  border-radius:30px;
+  position:relative;
+  border:2px solid white;
+  box-sizing: content-box;
+}
+
+.toggle-inner{
+ display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:24px;
+  width:40px;
+  height:40px;
+  background:white;
+  position:absolute;
+  top:5px;
+  left:7px;
+  z-index:2;
+  border-radius:100%;
+  transition:all .3s ease;
+}
+
+.toggle-on{
+  left:52px;
+  background:white;
+
+}
