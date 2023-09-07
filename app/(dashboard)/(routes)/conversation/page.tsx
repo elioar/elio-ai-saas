@@ -19,6 +19,7 @@ import { Loader } from "@/components/loader";
 import { cn } from "@/lib/utils";
 import { UserAvatar } from "@/components/user-avatar";
 import { BotAvatar } from "@/components/bot-avatar";
+import { useProModal } from "@/hooks/use-pro-modal";
 
 // Define the ChatCompletionRequestMessage interface
 interface ChatCompletionRequestMessage {
@@ -27,6 +28,7 @@ interface ChatCompletionRequestMessage {
 }
 
 const ConversationPage = () => {
+  const proModal = useProModal();
   const router = useRouter();
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
 
@@ -49,8 +51,9 @@ const ConversationPage = () => {
       
       form.reset();
     } catch (error: any) {
-      // Handle errors here
-      console.log(error);
+      if (error?.response?.status === 403) {
+        proModal.onOpen();
+      }
     } finally {
       router.refresh();
     }
