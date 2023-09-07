@@ -1,32 +1,16 @@
-"use client"
 import { UserButton } from "@clerk/nextjs";
-import MobileSidebar from "@/components/mobile-sidebar";
-import { useEffect, useState } from "react";
-import { Switch } from "./ui/switch";
-import Image from "next/image";
+import MobileSidebar from "./mobile-sidebar";
+import { getApiLimitCount } from "@/lib/api-limit";
+import DarkModeSwitch from './DarkModeSwitch';
 
-const Navbar = () => {
-    const [darkMode, setDarkMode] = useState(true); // Set dark mode as default
-
-    // Load user preference from localStorage on component mount
-    useEffect(() => {
-        const storedMode = localStorage.getItem("darkMode");
-        if (storedMode !== null) {
-            setDarkMode(storedMode === "true");
-        }
-    }, []);
-
-    // Update user preference in localStorage whenever darkMode changes
-    useEffect(() => {
-        localStorage.setItem("darkMode", darkMode.toString());
-        document.body.classList.toggle('dark', darkMode);
-    }, [darkMode]);
-
-    return (
-        <div className="flex items-center p-4">
-            <MobileSidebar />
-            <div className="mr-6 flex w-full justify-end items-center">
-                <svg className="dark:fill-white"
+const Navbar = async () => {
+    const apiLimitCount = await getApiLimitCount();
+  
+    return ( 
+      <div className="flex items-center p-4">
+        <MobileSidebar apiLimitCount={apiLimitCount} />
+        <div className="mr-6 flex w-full justify-end items-center">
+            <svg className="dark:fill-white mr-2"
                     viewBox="0 0 129 129"
                     width={20}
                     height={20}
@@ -45,19 +29,22 @@ const Navbar = () => {
                     </g>
                 </g>
                 </svg>
-                <Switch className="mr-2 ml-1.5" onClick={() => setDarkMode(prevMode => !prevMode)} />
-                <svg className="dark:fill-white"
-                    viewBox="0 0 30 25"
-                    width={20}
-                    height={20}
-                >
-                    <path id="Moon"
-                    d="M12.79,25A12.79,12.79,0,0,1,8.93,0,.5.5,0,0,1,9.5.76,10.72,10.72,0,0,0,24.24,15.49a.5.5,0,0,1,.74.58A12.73,12.73,0,0,1,12.79,25ZM8,1.43A11.79,11.79,0,1,0,23.57,17,11.73,11.73,0,0,1,8,1.43Z"
-                    />
-            </svg>
-            </div>
-            <UserButton afterMultiSessionSingleSignOutUrl="/" />
+            <DarkModeSwitch/>
+                <svg className="dark:fill-white ml-2"
+                        viewBox="0 0 30 25"
+                        width={20}
+                        height={20}
+                    >
+                        <path id="Moon"
+                        d="M12.79,25A12.79,12.79,0,0,1,8.93,0,.5.5,0,0,1,9.5.76,10.72,10.72,0,0,0,24.24,15.49a.5.5,0,0,1,.74.58A12.73,12.73,0,0,1,12.79,25ZM8,1.43A11.79,11.79,0,1,0,23.57,17,11.73,11.73,0,0,1,8,1.43Z"
+                        />
+                </svg>
         </div>
-    );
-}
+        <div>
+          <UserButton afterSignOutUrl="/" />
+        </div>
+      </div>
+     );
+  }
+
 export default Navbar;
