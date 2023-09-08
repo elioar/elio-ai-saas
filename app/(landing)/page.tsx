@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Switch } from "@/components/ui/switch";
 import Image from "@/node_modules/next/image";
+import { ModeToggle } from "@/components/Mode-toggle";
 
 const LandingPage = () => {
     const [darkMode, setDarkMode] = useState(true); // Set dark mode as default
@@ -36,16 +37,16 @@ const LandingPage = () => {
 
     return (
         <div className="flex items-center mt-2">
-            <div className="ml-5 w-10 h-10 relative">
+            <div className="ml-5 w-20 h-20 relative">
                 <Image
                     alt="logo"
                     fill
-                    src="/logoBL.png"
+                    src="/svg/logo-white.svg"
+                    className="white:bg-dark"
                 />
             </div>
             <div className="flex w-full justify-end mr-5">
-                Dark Mode
-                <Switch onClick={toggleDarkMode} />
+                <ModeToggle/>
             </div>
             <div>
                 <Link href="/sign-in">
