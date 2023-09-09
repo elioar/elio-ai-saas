@@ -4,6 +4,8 @@ import { getApiLimitCount } from "@/lib/api-limit";
 import DarkModeSwitch from './DarkModeSwitch';
 import { Moon, Sun } from "lucide-react";
 import { ModeToggle } from "./Mode-toggle";
+import {dark} from "@clerk/themes";
+
 
 const Navbar = async () => {
     const apiLimitCount = await getApiLimitCount();
@@ -15,7 +17,17 @@ const Navbar = async () => {
             <ModeToggle/>
         </div>
         <div>
-          <UserButton afterSignOutUrl="/" />
+          <UserButton afterSignOutUrl="/" 
+              appearance={{
+                variables: {
+                  colorAlphaShade: "white",
+                  colorPrimary: "white",
+                  colorBackground: "#111827",
+                  colorText: "white",
+                  colorTextOnPrimaryBackground: "white",
+              }
+            }}
+          />
         </div>
       </div>
      );
