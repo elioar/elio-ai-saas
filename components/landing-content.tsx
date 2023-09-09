@@ -4,40 +4,40 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 const Testimonials = [
     {
-        name: "Aleks",
-        avatar: "A",
-        title: "Web Developer",
-        description: "This is the best application I've used!"
+        name: "Emily",
+        avatar: "E",
+        title: "UX Designer",
+        description: "I'm impressed with the user-friendly design of this application."
     },
     {
         name: "Aleks",
         avatar: "A",
-        title: "Web Developer",
-        description: "This is the best application I've used!"
+        title: "Data Analyst",
+        description: "The data analysis tools in this app are incredibly useful."
     },
     {
-        name: "Aleks",
-        avatar: "A",
-        title: "Web Developer",
-        description: "This is the best application I've used!"
+        name: "Sarah",
+        avatar: "S",
+        title: "Product Manager",
+        description: "This app has greatly improved our team's productivity."
     },
     {
-        name: "Aleks",
-        avatar: "A",
-        title: "Web Developer",
-        description: "This is the best application I've used!"
+        name: "John",
+        avatar: "J",
+        title: "Software Engineer",
+        description: "The code quality in this application is top-notch."
     },
 ]
 
 export const LandingContent = () => {
-    return(
+    return (
         <div className="px-10 pd-20">
             <h2 className="text-center text-4xl font-extrabold mb-10">
                 Testimonials
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {Testimonials.map((item) => (
-                    <Card key={item.description} className="bg-[#192339] border-none">
+                    <Card key={item.description} className="bg-[rgba(250, 250, 250, 0.20)]" style={{ border: '2px solid rgba(255, 255, 255, 0.1)' }}>
                         <CardHeader>
                             <CardTitle className="flex items-center gap-x-2">
                                 <div>
@@ -54,4 +54,4 @@ export const LandingContent = () => {
             </div>
         </div>
     )
-} 
+}
