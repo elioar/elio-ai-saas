@@ -60,7 +60,7 @@ export const ProModal = () => {
                         {tools.map((tool) => (
                             <Card
                                 key={tool.label}
-                                className="p-3 border-black/5 flex items-center justify-between"
+                                className="bg-[rgba(250,250,250,0.04)] p-3 border-black/5 flex items-center justify-between"
                             >
                                 <div className="flex items-center gap-x-4">
                                     <div className={cn("p-2 w-fit rounded-md", tool.bgColor)}>
