@@ -13,8 +13,8 @@ export default function Page() {
       colorPrimary: "white",
       colorAlphaShade: "white",
       colorInputText: "white",
-      colorBackground: "rgba(250,250,250,0.04)",
-      colorInputBackground: "rgba(250,250,250,0.03)"
+      colorBackground: "rgba(0, 0, 0, 0.95)",
+      colorInputBackground: "rgba(250, 250, 250, 0.05)"
     },
     elements: {
       formButtonPrimary:
