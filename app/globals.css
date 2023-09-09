@@ -148,3 +148,9 @@ body,
   background:white;
 
 }
+
+/* Log in/up CANVA display in center */ 
+.centered-canvas {
+  display: block;
+  margin: 0 auto;
+}
