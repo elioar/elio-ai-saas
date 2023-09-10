@@ -19,6 +19,10 @@ import { UserAvatar } from "@/components/user-avatar";
 import { BotAvatar } from "@/components/bot-avatar";
 import { useProModal } from "@/hooks/use-pro-modal";
 import toast from "react-hot-toast";
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'; // You can choose a different theme
+
+
 
 // Define the ChatCompletionRequestMessage interface
 interface ChatCompletionRequestMessage {
@@ -131,21 +135,9 @@ const CodePage = () => {
                 )}
               >
                 {message.role ===  "user" ? <UserAvatar /> : <BotAvatar />}
-                <ReactMarkdown
-                  components={{
-                    pre: ({ node, ...props }) => (
-                      <div className="overflow-auto w-full my-2 bg-black/20 p-5 rounded-lg">
-                        <pre {...props} /> 
-                      </div>
-                    ),
-                    code: ({ node, ...props }) => (
-                      <code className="bg-black/20 rounded-lg p-1.5" {...props} />
-                    )
-                  }}
-                  className="text-sm overflow-hidden leading-7"
-                >
-                  {message.content || ""}
-                </ReactMarkdown>
+                <SyntaxHighlighter language="javascript" style={a11yDark}>
+                  {message.content || ''}
+                </SyntaxHighlighter>
               </div>
             ))}
           </div>

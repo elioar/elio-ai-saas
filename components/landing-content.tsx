@@ -1,6 +1,8 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { AiOutlinePicture, AiOutlineCode, AiOutlineVideoCamera } from 'react-icons/ai';
+
 
 const Testimonials = [
     {
@@ -27,31 +29,145 @@ const Testimonials = [
         title: "Software Engineer",
         description: "The code quality in this application is top-notch."
     },
-]
+    // Add more testimonials here
+    {
+        name: "Laura",
+        avatar: "L",
+        title: "Marketing Specialist",
+        description: "The marketing features in this app are fantastic."
+    },
+    {
+        name: "Michael",
+        avatar: "M",
+        title: "Customer Support",
+        description: "Our customers love the quick support provided by this app."
+    }, {
+        name: "Michael",
+        avatar: "M",
+        title: "Customer Support",
+        description: "Our customers love the quick support provided by this app."
+    }, {
+        name: "Michael",
+        avatar: "M",
+        title: "Customer Support",
+        description: "Our customers love the quick support provided by this app."
+    },
+];
+
+const MonthlySubscriptions = [
+    {
+        plan: "Basic",
+        price: "$9.99",
+        features: ["Feature 1", "Feature 2", "Feature 3"],
+    },
+    {
+        plan: "Pro",
+        price: "$19.99",
+        features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"],
+    },
+    {
+        plan: "Premium",
+        price: "$29.99",
+        features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4", "Feature 5"],
+    },
+];
 
 export const LandingContent = () => {
     return (
-        <div className="px-10 pd-20">
-            <h2 className="text-center text-4xl font-extrabold mb-10">
+        <div className="px-10 py-20">
+            <h2 className="text-center text-5xl font-extrabold mb-12">
                 Testimonials
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {Testimonials.map((item) => (
                     <Card key={item.description} className="bg-[rgba(250, 250, 250, 0.20)]" style={{ border: '2px solid rgba(255, 255, 255, 0.1)' }}>
                         <CardHeader>
-                            <CardTitle className="flex items-center gap-x-2">
+                            <CardTitle className="flex items-center gap-x-4">
                                 <div>
-                                    <p className="text-lg">{item.name}</p>
-                                    <p className="text-zinc-400 text-sm">{item.title}</p>
+                                    <p className="text-xl">{item.name}</p>
+                                    <p className="text-zinc-400 text-lg">{item.title}</p>
                                 </div>
                             </CardTitle>
-                            <CardContent className="pt-4 px-0">
+                            <CardContent className="pt-6 px-4 text-lg">
                                 {item.description}
                             </CardContent>
                         </CardHeader>
                     </Card>
                 ))}
             </div>
+
+            {/* Add more content sections here */}
+            <div className="py-12">
+                <h2 className="text-center text-5xl font-extrabold mb-12">
+                    Latest Features
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+                    <div className="bg-[rgba(250, 250, 250, 0.20)] p-4 sm:p-6 rounded-lg shadow-lg">
+                        <div className="flex items-center mb-2 sm:mb-4">
+                            <AiOutlinePicture className="text-3xl sm:text-4xl text-blue-500 mr-2 sm:mr-4" />
+                            <h3 className="text-xl sm:text-2xl font-semibold">AI Image Generator</h3>
+                        </div>
+                        <p className="text-base sm:text-lg">
+                            Our new AI-powered image generator lets you create stunning visuals with ease. Generate high-quality images for your projects without any design experience.
+                        </p>
+                    </div>
+                    <div className="bg-[rgba(250, 250, 250, 0.20)] p-4 sm:p-6 rounded-lg shadow-lg">
+                        <div className="flex items-center mb-2 sm:mb-4">
+                            <AiOutlineCode className="text-3xl sm:text-4xl text-green-500 mr-2 sm:mr-4" />
+                            <h3 className="text-xl sm:text-2xl font-semibold">Code Generator</h3>
+                        </div>
+                        <p className="text-base sm:text-lg">
+                            Say goodbye to manual coding. Our code generator streamlines the development process, automatically generating clean and efficient code for your applications.
+                        </p>
+                    </div>
+                    <div className="bg-[rgba(250, 250, 250, 0.20)] p-4 sm:p-6 rounded-lg shadow-lg">
+                        <div className="flex items-center mb-2 sm:mb-4">
+                            <AiOutlineVideoCamera className="text-3xl sm:text-4xl text-red-500 mr-2 sm:mr-4" />
+                            <h3 className="text-xl sm:text-2xl font-semibold">Video Generator</h3>
+                        </div>
+                        <p className="text-base sm:text-lg">
+                            Create engaging videos in minutes. Our video generator empowers you to produce professional-looking videos for your marketing campaigns or presentations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                     {/* Monthly Subscriptions Table */}
+            <div className="px-10 py-12">
+                <h2 className="text-center text-5xl font-extrabold mb-12">
+                    Monthly Subscriptions
+                </h2>
+                <table className="w-full border-collapse">
+                    <thead>
+                        <tr>
+                            <th className="border border-gray-300 px-4 py-2">Plan</th>
+                            <th className="border border-gray-300 px-4 py-2">Price</th>
+                            <th className="border border-gray-300 px-4 py-2">Features</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {MonthlySubscriptions.map((subscription, index) => (
+                            <tr key={index}>
+                                <td className="border border-gray-300 px-4 py-2">{subscription.plan}</td>
+                                <td className="border border-gray-300 px-4 py-2">{subscription.price}</td>
+                                <td className="border border-gray-300 px-4 py-2">
+                                    <ul>
+                                        {subscription.features.map((feature, featureIndex) => (
+                                            <li key={featureIndex}>{feature}</li>
+                                        ))}
+                                    </ul>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+
+            {/* Add more content sections as needed */}
+            
         </div>
-    )
-}
+    );
+};
+
+export default LandingContent;
+
