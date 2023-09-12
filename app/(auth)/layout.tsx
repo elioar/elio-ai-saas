@@ -22,7 +22,7 @@ const AuthLayout = ({
         </div>
       </div>
       {/* Place the centered content here */}
-      <main className="content centered-content">{children}</main>
+        <main className="content centered-content">{children}</main>
     </div>
   );
 };
