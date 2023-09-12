@@ -6,7 +6,7 @@ const Load: React.FC = () => {
     <div className="load-container">
 <svg className="snurra" width="100" height="" viewBox="0 0 300 300">
       <defs>
-        <linearGradient id="linjärGradient">
+        <linearGradient id="linjärGradient" className='transition-colors'>
           <stop className="stopp1" offset="0" />
           <stop className="stopp2" offset="1" />
           <stop className="stopp3" offset="2" />
