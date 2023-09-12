@@ -38,11 +38,6 @@ export const LandingNavbar = () => {
                         Sign In
                     </Button>
                 </Link>
-                <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
-                    <Button variant="outline" className="rounded-full">
-                        Get Started
-                    </Button>
-                </Link>
             </div>
         </nav>
     )
