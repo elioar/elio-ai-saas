@@ -54,24 +54,6 @@ const Testimonials = [
     },
 ];
 
-const MonthlySubscriptions = [
-    {
-        plan: "Basic",
-        price: "$9.99",
-        features: ["Feature 1", "Feature 2", "Feature 3"],
-    },
-    {
-        plan: "Pro",
-        price: "$19.99",
-        features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"],
-    },
-    {
-        plan: "Premium",
-        price: "$29.99",
-        features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4", "Feature 5"],
-    },
-];
-
 export const LandingContent = () => {
     return (
         <div className="px-10 py-20">
@@ -131,43 +113,6 @@ export const LandingContent = () => {
                     </div>
                 </div>
             </div>
-
-                     {/* Monthly Subscriptions Table */}
-            <div className="px-10 py-12">
-                <h2 className="text-center text-5xl font-extrabold mb-12">
-                    Monthly Subscriptions
-                </h2>
-                <table className="w-full border-collapse">
-                    <thead>
-                        <tr>
-                            <th className="border border-gray-300 px-4 py-2">Plan</th>
-                            <th className="border border-gray-300 px-4 py-2">Price</th>
-                            <th className="border border-gray-300 px-4 py-2">Features</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {MonthlySubscriptions.map((subscription, index) => (
-                            <tr key={index}>
-                                <td className="border border-gray-300 px-4 py-2">{subscription.plan}</td>
-                                <td className="border border-gray-300 px-4 py-2">{subscription.price}</td>
-                                <td className="border border-gray-300 px-4 py-2">
-                                    <ul>
-                                        {subscription.features.map((feature, featureIndex) => (
-                                            <li key={featureIndex}>{feature}</li>
-                                        ))}
-                                    </ul>
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-
-            {/* Add more content sections as needed */}
-            
         </div>
     );
 };
-
-export default LandingContent;
-
