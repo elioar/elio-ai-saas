@@ -86,7 +86,7 @@ export const LandingContent = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
                     <div className="bg-[rgba(250, 250, 250, 0.20)] p-4 sm:p-6 rounded-lg shadow-lg">
                         <div className="flex items-center mb-2 sm:mb-4">
-                            <AiOutlinePicture className="text-3xl sm:text-4xl text-blue-500 mr-2 sm:mr-4" />
+                            <AiOutlinePicture className="text-3xl sm:text-4xl text-indigo-500 mr-2 sm:mr-4" />
                             <h3 className="text-xl sm:text-2xl font-semibold">AI Image Generator</h3>
                         </div>
                         <p className="text-base sm:text-lg">
@@ -95,7 +95,7 @@ export const LandingContent = () => {
                     </div>
                     <div className="bg-[rgba(250, 250, 250, 0.20)] p-4 sm:p-6 rounded-lg shadow-lg">
                         <div className="flex items-center mb-2 sm:mb-4">
-                            <AiOutlineCode className="text-3xl sm:text-4xl text-green-500 mr-2 sm:mr-4" />
+                            <AiOutlineCode className="text-3xl sm:text-4xl text-pink-500 mr-2 sm:mr-4" />
                             <h3 className="text-xl sm:text-2xl font-semibold">Code Generator</h3>
                         </div>
                         <p className="text-base sm:text-lg">
@@ -104,7 +104,7 @@ export const LandingContent = () => {
                     </div>
                     <div className="bg-[rgba(250, 250, 250, 0.20)] p-4 sm:p-6 rounded-lg shadow-lg">
                         <div className="flex items-center mb-2 sm:mb-4">
-                            <AiOutlineVideoCamera className="text-3xl sm:text-4xl text-red-500 mr-2 sm:mr-4" />
+                            <AiOutlineVideoCamera className="text-3xl sm:text-4xl text-cyan-500 mr-2 sm:mr-4" />
                             <h3 className="text-xl sm:text-2xl font-semibold">Video Generator</h3>
                         </div>
                         <p className="text-base sm:text-lg">

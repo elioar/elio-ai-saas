@@ -5,16 +5,6 @@
   box-sizing: border-box;
 }
 
-/* Reset margin and set background color for the body */
-body {
-  margin: 0;
-  height: 100vh; /* Ensure it takes the full height of the viewport */
-  display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  overflow: hidden; /* Hide the scroll bar */
-}
-
 /* Styles for shape elements */
 .shape {
   margin: 0 auto;
