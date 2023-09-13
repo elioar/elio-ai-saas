@@ -10,7 +10,7 @@ const AuthLayout = ({
 }) => {
 
   // Define a state variable to control the class name
-  const [backgroundClassName, setBackgroundClassName] = useState('background-container');
+  const [backgroundClassName] = useState('background-container');
 
   return (
     <div className="auth-layout">

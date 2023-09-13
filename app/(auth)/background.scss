@@ -17,32 +17,32 @@
   --left: 0;
   --background: linear-gradient(indigo, purple, hotpink, pink, cyan);
   --offset: 0deg;
-  --speed: 8000ms;
+  --speed: 8s; /* Changed to seconds (s) */
   clip-path: var(--path);
   background: var(--background);
-  scale: var(--scale);
+  transform: scale(var(--scale));
   opacity: var(--opacity);
   width: var(--width);
   top: var(--top);
   left: var(--left);
-  rotate: var(--offset);
+  transform: rotate(var(--offset)); /* Changed from 'rotate' to 'transform: rotate' */
   mix-blend-mode: difference;
-  animation: turn var(--speed) linear forwards infinite;
+  animation: turn var(--speed) linear infinite; /* Removed 'forwards' and set 'infinite' */
 }
 
 /* Keyframes for shape animation */
 @keyframes turn {
   to {
-    rotate: calc(var(--offset) + 1turn);
+    transform: rotate(calc(var(--offset) + 1turn)); /* Changed from 'rotate' to 'transform: rotate' */
   }
 }
 
 /* Styles for the blurred background container */
 .blur-container {
-  --blur: 40px;
+  --blur: 30px;
   filter: blur(var(--blur));
-  width: 100%; /* Set the width to 100% of the viewport */
-  height: 100%; /* Set the height to 100% of the viewport */
+  width: 100vw; /* Changed to viewport width (vw) */
+  height: 100vh; /* Changed to viewport height (vh) */
   display: grid;
   place-items: center; /* Center the background content both horizontally and vertically */
   overflow: hidden;
@@ -50,5 +50,12 @@
 }
 
 .background-container {
-  --blur: 13vw;
+  --blur: 40vw; /* Changed to viewport width (vw) */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* This places it behind other elements */
+  /* Add any other necessary styling */
 }
