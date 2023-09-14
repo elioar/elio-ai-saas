@@ -64,7 +64,7 @@ const DashboardPage = () => {
                             style={{
                                 backgroundImage: `url('https://images.unsplash.com/photo-1626428091984-48f9ffbf927c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1866&q=80')`,
                                 backgroundSize: 'cover',
-                                height: '300px',
+                                height: '250px',
                             }}
                         >
                             <div
@@ -81,7 +81,7 @@ const DashboardPage = () => {
                             style={{
                                 backgroundImage: `url('https://images.unsplash.com/photo-1629946832022-c327f74956e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80')`,
                                 backgroundSize: 'cover',
-                                height: '300px',
+                                height: '250px',
                             }}
                         >
                             <div
@@ -98,7 +98,7 @@ const DashboardPage = () => {
                             style={{
                                 backgroundImage: `url('https://images.unsplash.com/photo-1633907284646-7abf4a195875?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80')`,
                                 backgroundSize: 'cover',
-                                height: '300px',
+                                height: '250px',
                             }}
                         >
                             <div
@@ -109,14 +109,13 @@ const DashboardPage = () => {
                             </p>
                         </div>
                     </Link>
-
                     <Link href="/code">
                         <div
                             className="relative group transition-transform transform scale-100 group-hover:scale-105 rounded-xl hover:scale-105"
                             style={{
                                 backgroundImage: `url('https://images.unsplash.com/photo-1650018943477-781416d478cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80')`,
                                 backgroundSize: 'cover',
-                                height: '300px',
+                                height: '250px',
                             }}
                         >
                             <div
@@ -129,7 +128,22 @@ const DashboardPage = () => {
                     </Link>
 
                 </div>
-
+            <div>
+                <Link href="/code">
+                    <div className="relative group transition-transform transform scale-100 group-hover:scale-105 rounded-xl hover:scale-105"
+                            style={{
+                            backgroundImage: `url('https://images.unsplash.com/photo-1559838536-082a0c488adf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80')`,
+                            backgroundSize: 'cover',
+                            height: '100px',
+                        }}
+                    >                      
+                    <div className="absolute inset-0 backdrop-blur-md backdrop-filter duration-300 opacity-0 group-hover:opacity-100 rounded-xl"></div>
+                        <p className="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl">
+                            Code Generation
+                        </p>
+                    </div>
+                </Link>
+            </div>
             </div>
         </div>
     )
