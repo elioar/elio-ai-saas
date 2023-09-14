@@ -34,7 +34,7 @@ export const LandingNavbar = () => {
             <div className="flex items-center gap-x-2">
                 <ModeToggle />
                 <Link href={isSignedIn ? "/dashboard" : "/sign-in"}>
-                    <Button variant="outline" className="rounded-full">
+                    <Button variant="outline" className="rounded-full bg-[rgba(250, 250, 250, 0.20)] border-white">
                         Sign In
                     </Button>
                 </Link>
