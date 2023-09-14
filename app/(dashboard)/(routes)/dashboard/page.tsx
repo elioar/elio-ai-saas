@@ -58,7 +58,7 @@ const DashboardPage = () => {
             </div>
             <div className="px-4 md:px-20 lg:px-52 space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-6 md:gap-6">
-                    <Link href="/conversation">
+                    <Link href="/video">
                         <div
                             className="relative group transition-transform transform scale-100 group-hover:scale-105 rounded-xl hover:scale-105"
                             style={{
@@ -71,7 +71,7 @@ const DashboardPage = () => {
                                 className="absolute inset-0 backdrop-blur-md backdrop-filter duration-300 opacity-0 group-hover:opacity-100 rounded-xl"
                             ></div>
                             <p className="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl">
-                                Conversation
+                                Video Generation
                             </p>
                         </div>
                     </Link>
