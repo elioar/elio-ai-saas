@@ -62,7 +62,7 @@ const DashboardPage = () => {
                         <div
                             className="relative group transition-transform transform scale-100 group-hover:scale-105 rounded-xl hover:scale-105"
                             style={{
-                                backgroundImage: `url('https://www.analyticsinsight.net/wp-content/uploads/2020/06/The-rise-of-conversational-AI.jpg')`,
+                                backgroundImage: `url('https://images.unsplash.com/photo-1626428091984-48f9ffbf927c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1866&q=80')`,
                                 backgroundSize: 'cover',
                                 height: '300px',
                             }}
@@ -79,7 +79,7 @@ const DashboardPage = () => {
                         <div
                             className="relative group transition-transform transform scale-100 group-hover:scale-105 rounded-xl hover:scale-105"
                             style={{
-                                backgroundImage: `url('https://images1.welcomesoftware.com/Zz1jMjJlYWU5MjgyZGExMWVjOWYwMTQyYjRkZjYxNDhlYw==')`,
+                                backgroundImage: `url('https://images.unsplash.com/photo-1629946832022-c327f74956e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80')`,
                                 backgroundSize: 'cover',
                                 height: '300px',
                             }}
@@ -96,7 +96,7 @@ const DashboardPage = () => {
                         <div
                             className="relative group transition-transform transform scale-100 group-hover:scale-105 rounded-xl hover:scale-105"
                             style={{
-                                backgroundImage: `url('https://imgv3.fotor.com/images/cover-photo-image/a-beautiful-girl-with-gray-hair-and-lucxy-neckless-generated-by-Fotor-AI.jpg')`,
+                                backgroundImage: `url('https://images.unsplash.com/photo-1633907284646-7abf4a195875?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80')`,
                                 backgroundSize: 'cover',
                                 height: '300px',
                             }}
@@ -114,7 +114,7 @@ const DashboardPage = () => {
                         <div
                             className="relative group transition-transform transform scale-100 group-hover:scale-105 rounded-xl hover:scale-105"
                             style={{
-                                backgroundImage: `url('https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2dyYW1taW5nfGVufDB8fDB8fHww&w=1000&q=80')`,
+                                backgroundImage: `url('https://images.unsplash.com/photo-1650018943477-781416d478cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80')`,
                                 backgroundSize: 'cover',
                                 height: '300px',
                             }}
