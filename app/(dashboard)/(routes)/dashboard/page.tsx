@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { SendHorizontalIcon } from "lucide-react";
+import { ArrowRight, SendHorizontalIcon } from "lucide-react";
 
 const DashboardPage = () => {
     const router = useRouter();
@@ -15,7 +15,7 @@ const DashboardPage = () => {
                     Chat with the smartest AI - Experience the power of AI
                 </p>
             </div>
-            <div className="px-4 md:px-20 lg:px-52 space-y-4">
+            <div className="px-5 md:px-20 lg:px-52 space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-6 md:gap-6">
                     <Link href="/video">
                         <div
@@ -23,7 +23,7 @@ const DashboardPage = () => {
                             style={{
                                 backgroundImage: `url('https://images.unsplash.com/photo-1626428091984-48f9ffbf927c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1866&q=80')`,
                                 backgroundSize: 'cover',
-                                height: '200px',
+                                height: '200px',                            
                             }}
                         >
                             <div
@@ -32,6 +32,9 @@ const DashboardPage = () => {
                             <p className="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl">
                                 Video Generation
                             </p>
+                            <div className="mr-12 absolute inset-0 flex items-center justify-end text-white font-bold text-2xl">
+                                <ArrowRight />
+                            </div>
                         </div>
                     </Link>
                     <Link href="/music">
@@ -49,6 +52,9 @@ const DashboardPage = () => {
                             <p className="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl">
                                 Music Generation
                             </p>
+                            <div className="mr-12 absolute inset-0 flex items-center justify-end text-white font-bold text-2xl">
+                                <ArrowRight />
+                            </div>
                         </div>
                     </Link>
                     <Link href="/image">
@@ -66,6 +72,9 @@ const DashboardPage = () => {
                             <p className="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl">
                                 Image Generation
                             </p>
+                            <div className="mr-12 absolute inset-0 flex items-center justify-end text-white font-bold text-2xl">
+                                <ArrowRight />
+                            </div>
                         </div>
                     </Link>
                     <Link href="/code">
@@ -83,12 +92,15 @@ const DashboardPage = () => {
                             <p className="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl">
                                 Code Generation
                             </p>
+                            <div className="mr-12 absolute inset-0 flex items-center justify-end text-white font-bold text-2xl">
+                                <ArrowRight />
+                            </div>
                         </div>
                     </Link>
 
                 </div>
             <div>
-                <Link href="/code">
+                <Link href="/conversation">
                     <div className="bg-black relative group transition-transform transform scale-100 group-hover:scale-105 rounded-xl hover:scale-105"
                             style={{
                             backgroundImage: `url('https://images.unsplash.com/photo-1618029529501-9adf93df3e84?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
@@ -98,7 +110,7 @@ const DashboardPage = () => {
                     >                      
                     <div className="absolute inset-0 backdrop-blur-md backdrop-filter duration-300 opacity-0 group-hover:opacity-100 rounded-xl"></div>
                         <p className="ml-12 absolute inset-0 flex items-center justify-left text-white font-bold text-2xl">
-                            Code Generation
+                            Conversation
                         </p>
                         <div className="mr-12 absolute inset-0 flex items-center justify-end text-white font-bold text-2xl">
                             <SendHorizontalIcon />

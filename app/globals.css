@@ -91,10 +91,15 @@ body,
 
 .custom-btn {
   background: linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5);
-  background-size: 600%;
-  -webkit-animation: anime 10s linear infinite;
-  animation: anime 10s linear infinite;
+  background-size: 150%;
+  -webkit-animation: anime 3s linear infinite;
+  animation: anime 5s linear infinite;
 }
+
+
+
+
+
 
 
 @-webkit-keyframes anime {
