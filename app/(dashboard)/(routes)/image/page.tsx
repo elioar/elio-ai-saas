@@ -182,6 +182,8 @@ const PhotoPage = () => {
                   fill
                   alt="Generated"
                   src={src}
+                  className="transition-opacity opacity-0 duration-[2s]"
+                  onLoadingComplete={(image) => image.classList.remove("opacity-0")}
                 />
               </div>
               <CardFooter className="p-2">
