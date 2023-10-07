@@ -4,7 +4,8 @@ This is a Next.js project for an AI SaaS application.
 
 ## Demo Preview
 
-You can preview the application here: [Demo](https://elio-ai-saas.vercel.app)
+You can preview the application here: [Preview The App](https://elio-ai-saas.vercel.app)
+
 You can use the following demo account information to log in:
 
 - **Email:** demo@demo.com
