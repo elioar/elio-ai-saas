@@ -2,6 +2,10 @@
 
 This is a Next.js project for an AI SaaS application.
 
+## Demo Preview
+
+You can preview the application here: [Demo](https://elio-ai-saas.vercel.app)
+
 ## Getting Started
 
 First, run the development server:
