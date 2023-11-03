@@ -130,13 +130,14 @@ const LandingPage = () => {
               >
                 Explore Demo
               </a>
-              <button className="Header_hamburger__X_hhy">
+              <button className="Header_hamburger__X_hhy" aria-label="Open Menu">
                 <svg fill="none" height="12" viewBox="0 0 14 12" width="14">
                   <path d="M0 1H14" stroke="white" />
                   <path d="M0 6H14" stroke="white" />
                   <path d="M0 11H14" stroke="white" />
                 </svg>
               </button>
+
             </div>
             <div className="menu">
               <button className="close-button">
@@ -1012,7 +1013,6 @@ const LandingPage = () => {
                   >
                     Elio.Dev{' '}
                   </a>
-
                   <br className="Footer_copyrightBreak__yeGun" />
                   All rights reserved.
                 </p>

@@ -139,6 +139,10 @@
     width: 15px;
     margin-right: var(--token-12)
 }
+.Footer_complianceLink__QDmX8 a {
+    padding: 10px 20px; /* Adjust the padding values as needed for appropriate sizing */
+}
+
 
 .Button_container__i_Vit {
     position: relative;
