@@ -186,11 +186,7 @@ const LandingPage = () => {
                     <div className="Hero_textWrapper__QPzbE">
 
                       <h1>
-                        Enhance
-                        <em>
-                          conversations
-                        </em>
-                        with AI Chat and Tools
+                        Enhance conversations with AI Chat and Tools
                       </h1>
 
                       <p>
