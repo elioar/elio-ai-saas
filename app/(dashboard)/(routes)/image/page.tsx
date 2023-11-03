@@ -178,13 +178,14 @@ const PhotoPage = () => {
           {photos.map((src) => (
             <Card key={src} className="rounded-lg overflow-hidden">
               <div className="relative aspect-square">
-                <Image
-                  fill
-                  alt="Generated"
-                  src={src}
-                  className="transition-opacity opacity-0 duration-[2s]"
-                  onLoadingComplete={(image) => image.classList.remove("opacity-0")}
-                />
+              <Image
+  fill
+  alt="Generated"
+  src={src}
+  className="transition-opacity opacity-0 duration-2s"
+  onLoadingComplete={(image) => image.classList.remove("opacity-0")}
+/>
+
               </div>
               <CardFooter className="p-2">
                 <Button onClick={() => window.open(src)} variant="secondary" className="w-full">
