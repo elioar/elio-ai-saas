@@ -1,6 +1,9 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
+
+
 
 const LandingPage = () => {
   const [backgroundClassName] = useState('background-container');
@@ -8,7 +11,6 @@ const LandingPage = () => {
   return (
     <div className="auth-layout">
     <div className="centered-container">
-      {/* Place the background here */}
       <div className={`blur-container ${backgroundClassName}`}>
         <div className="shape"></div>
         <div className="shape"></div>
@@ -34,6 +36,16 @@ const LandingPage = () => {
         rel="icon"
         type="image/png"
       />
+       <link
+        data-n-g=""
+        href="css/style2.css"
+        rel="stylesheet"
+      />
+      <link
+        data-n-p=""
+        href="css/style.css"
+        rel="stylesheet"
+      />
       <meta
         content="23"
         name="next-head-count"
@@ -54,21 +66,13 @@ const LandingPage = () => {
         href="css/style2.css"
         rel="preload"
       />
-      <link
-        data-n-g=""
-        href="css/style2.css"
-        rel="stylesheet"
-      />
+
       <link
         as="style"
         href="css/style.css"
         rel="preload"
       />
-      <link
-        data-n-p=""
-        href="css/style.css"
-        rel="stylesheet"
-      />
+
       <link
         href="/manifest.json"
         rel="manifest"
@@ -76,8 +80,8 @@ const LandingPage = () => {
       <div id="__next">
         <div style={{}} />
         <header className="Header_header__pXml_" data-light-theme="false">
-          <img alt="Logo" className="Header_logo__sUWiP" height="100" src="images/Logo.svg" width="100" />
-          <img className="Header_logoMobile__MEikt" height="100" src="images/Logo.svg" width="100" />
+          <Image alt="Logo" className="Header_logo__sUWiP" height="100" src="images/Logo.svg" width="100" />
+          <Image alt='logo' className="Header_logoMobile__MEikt" height="100" src="images/Logo.svg" width="100" />
           <nav aria-label="Main" className="Navigation_navigation__SaCR1" data-orientation="horizontal" dir="ltr">
             <div className="Navigation_island__hx7CL">
               <div style={{ position: 'relative' }}>
@@ -233,70 +237,70 @@ const LandingPage = () => {
 
                   <div className="Logos_logoGrid___OFR7">
 
-                    <img
+                    <Image
                       alt="logo1"
                       height="100"
                       src="images/logos/humaans.svg"
                       width="100"
                     />
 
-                    <img
+                    <Image
                       alt="logo2"
                       height="100"
                       src="images/logos/ness.svg"
                       width="100"
                     />
 
-                    <img
+                    <Image
                       alt="logo3"
                       height="100"
                       src="images/logos/okra.svg"
                       width="100"
                     />
 
-                    <img
+                    <Image
                       alt="logo4"
                       height="100"
                       src="images/logos/resly.svg"
                       width="100"
                     />
 
-                    <img
+                    <Image
                       alt="logo5"
                       height="100"
                       src="images/logos/safety-wing.svg"
                       width="100"
                     />
 
-                    <img
+                    <Image
                       alt="logo6"
                       height="100"
                       src="images/logos/sorare.svg"
                       width="100"
                     />
 
-                    <img
+                    <Image
                       alt="logo7"
                       height="100"
                       src="images/logos/stitch.svg"
                       width="100"
                     />
 
-                    <img
+                    <Image
                       alt="logo8"
                       height="100"
                       src="images/logos/unqork.svg"
                       width="100"
                     />
 
-                    <img
+                    <Image
                       alt="logo9"
                       height="100"
                       src="images/logos/visa.svg"
                       width="100"
                     />
 
-                    <img
+                    <Image
                       alt="logo10"
                       height="100"
                       src="images/logos/vital.svg"
@@ -329,7 +333,7 @@ const LandingPage = () => {
                         className="thumbnail-container"
                       >
 
-                        <img
+                        <Image
                           alt="Custom Thumbnail Image"
                           height="100"
                           loading="lazy"
@@ -408,7 +412,7 @@ const LandingPage = () => {
                     </h2>
 
                     <p className="Features_subHeading__N7HnS">
-                      Evervault is secure by default. We build, manage, and implement                  security best practices into the platform so you don't have to.
+                      Evervault is secure by default. We build, manage, and implement                  security best practices into the platform so you don&apos;t have to.
                     </p>
 
                   </div>
@@ -917,7 +921,7 @@ const LandingPage = () => {
         >
 
           <div className="Footer_container__Mn8SS container">
-            <img
+            <Image
               alt="Logo"
               className="Footer_logo__ZNv_V"
               height="50"
@@ -1024,7 +1028,7 @@ const LandingPage = () => {
                 </li>
 
                 <li className="Footer_complianceLink__QDmX8">
-                  <img
+                  <Image
                     alt="eixaiLogo"
                     height="17"
                     src="images/Logo(s).svg"
@@ -1036,7 +1040,7 @@ const LandingPage = () => {
                 </li>
 
                 <li className="Footer_complianceLink__QDmX8">
-                  <img
+                  <Image
                     alt="webelioxLogo"
                     height="17"
                     src="images/icon-white.svg"
@@ -1088,13 +1092,6 @@ const LandingPage = () => {
 
         </footer>
       </div>
-      <script
-        crossOrigin="anonymous"
-        integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
-        referrerPolicy="no-referrer"
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
-      />
-      <script src="./src/script.js" />
     </div>
   </div>
   );
