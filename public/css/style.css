@@ -47,7 +47,7 @@
 }
 
 .Cta_maxWidthWrapper__su_4C {
-    padding: 12rem 0;
+    padding: 5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,6 +112,7 @@
     border-bottom: 1px solid var(--grey-80);
     background: radial-gradient(150% 150% at 50% 20%, transparent 40%, #ee33ee 100%, #fff 0)
 }
+
 
 @media (max-width:799px) {
     .Features_container__Cb2SR {
@@ -251,7 +252,8 @@
     margin-bottom: var(--token-04)
 }
 
-.Features_featureTitle__oyjT_ h5 {
+.Features_featureTitle__oyjT_ h3 {
+    font-size: 18px; /* You can adjust the value to make the text smaller or larger */
     margin-bottom: 0;
     margin-left: var(--token-08)
 }

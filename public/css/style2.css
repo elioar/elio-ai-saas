@@ -65,7 +65,7 @@
 }
 
 .Footer_logo__ZNv_V {
-    width: var(--token-56);
+    width: 150px;
     margin-bottom: var(--token-48)
 }
 
@@ -88,7 +88,7 @@
 
 .Fotter_potofolio {
     position: relative;
-    font-weight: 700;
+    font-weight: 200;
     align-items: center;
     -webkit-text-decoration: none;
     text-decoration: none;
@@ -136,7 +136,7 @@
 }
 
 .Footer_complianceLink__QDmX8 img {
-    width: var(--token-32);
+    width: 15px;
     margin-right: var(--token-12)
 }
 
