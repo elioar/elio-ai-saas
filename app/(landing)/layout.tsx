@@ -1,24 +1,15 @@
 "use client";
 
-import 'app/(auth)/background.scss';
-import { useState } from 'react';
+import React from 'react';
 
-const LandingLayout = ({
-    children
-}: {
-    children: React.ReactNode;
-}) => {
-
-  const [backgroundClassName] = useState('background-container');
-
-
+const LandingLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="h-full overflow-auto">
-        <div>
-            {children}
-        </div>
+    <main>
+      <div>
+        {children}
+      </div>
     </main>
   );
 }
 
-export default LandingLayout
+export default LandingLayout;

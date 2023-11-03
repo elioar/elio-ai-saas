@@ -1,12 +1,19 @@
 "use client";
 
 import React, { useState } from 'react';
-import 'app/(auth)/background.scss';
 
 const LandingPage = () => {
   const [backgroundClassName] = useState('background-container');
 
   return (
+    <div className="auth-layout">
+    <div className="centered-container">
+      {/* Place the background here */}
+      <div className={`blur-container ${backgroundClassName}`}>
+        <div className="shape"></div>
+        <div className="shape"></div>
+      </div>
+    </div>
     <div>
       <meta charSet="utf-8" />
       <title>EixAi - Your Ai Tools</title>
@@ -1089,6 +1096,7 @@ const LandingPage = () => {
       />
       <script src="./src/script.js" />
     </div>
+  </div>
   );
 };
 
