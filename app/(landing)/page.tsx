@@ -137,39 +137,6 @@ const LandingPage = () => {
                   <path d="M0 11H14" stroke="white" />
                 </svg>
               </button>
-
-            </div>
-            <div className="menu">
-              <button className="close-button">
-                Close
-              </button>
-              <ul>
-                <li>
-                  <a href="#">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="https://webeliox.com">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a href="https://webeliox.com">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="https://webeliox.com">
-                    Portfolio
-                  </a>
-                </li>
-                <li>
-                  <a href="https://webeliox.com">
-                    Contact Us
-                  </a>
-                </li>
-              </ul>
             </div>
           </header>
           <div className="Layout_layout__6J70X">
@@ -325,13 +292,14 @@ const LandingPage = () => {
                       </h2>
 
                       <div className="modern-video-player">
-                        <Image
+                        <img
                           alt="App Screenshot"
-                          height={100}
+                          height="200"
                           loading="lazy"
                           src="/images/thub.jpg"
-                          width={100}
+                          width="200"
                         />
+
                       </div>
 
                     </div>
