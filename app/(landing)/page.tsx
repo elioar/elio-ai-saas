@@ -278,9 +278,10 @@ const LandingPage = () => {
                       <div className="modern-video-player">
                         <Image
                           alt="App Screenshot"
+                          height="1000"
                           loading="lazy"
                           src="/images/thub.jpg"
-                          style={{ width: "100%", height: "100%" }}
+                          width="1000"
                         />
                       </div>
                     </div>
