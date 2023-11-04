@@ -2,9 +2,13 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { useAuth } from "@clerk/nextjs";
+
 
 const LandingPage = () => {
   const [backgroundClassName] = useState("background-container");
+  const { isSignedIn } = useAuth();
+
 
   return (
     <div className="auth-layout">
@@ -123,7 +127,7 @@ const LandingPage = () => {
                 data-pulse="false"
                 data-size="regular"
                 data-type="transparent"
-                href="https://elio-ai-saas.vercel.app/sign-in?redirect_url=https%3A%2F%2Felio-ai-saas.vercel.app%2Fdashboard"
+                href={isSignedIn? "/dashboard" : "/sign-in"}
               >
                 Log in
               </a>
@@ -132,9 +136,9 @@ const LandingPage = () => {
                 data-pulse="false"
                 data-size="regular"
                 data-type="primary"
-                href="https://elio-ai-saas.vercel.app/sign-in?redirect_url=https%3A%2F%2Felio-ai-saas.vercel.app%2Fdashboard"
+                href={isSignedIn? "/dashboard" : "/sign-up"}
               >
-                Explore Demo
+                Sing Up
               </a>
               <button
                 className="Header_hamburger__X_hhy"
@@ -170,7 +174,7 @@ const LandingPage = () => {
                             data-pulse="false"
                             data-size="large"
                             data-type="primary"
-                            href="https://elio-ai-saas.vercel.app/sign-in?redirect_url=https%3A%2F%2Felio-ai-saas.vercel.app%2Fdashboard"
+                            href={isSignedIn? "/dashboard" : "/sign-in"}
                           >
                             Explore Demo
                           </a>
@@ -179,7 +183,7 @@ const LandingPage = () => {
                             data-pulse="false"
                             data-size="large"
                             data-type="transparent"
-                            href="https://elio-ai-saas.vercel.app/sign-up?redirect_url=https%3A%2F%2Felio-ai-saas.vercel.app%2Fdashboard"
+                            href={isSignedIn? "/dashboard" : "/sign-up"}
                             target="_blank"
                           >
                             Try for free
