@@ -193,7 +193,7 @@ const LandingPage = () => {
                       <div className="mockup">
                       <Image
                         alt="logo1"
-                        height="100"
+                        height="510"
                         src="/images/iphone15pro.png"
                         width="250"
                       />
