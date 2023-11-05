@@ -1,9 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+
 import {
   Card,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -19,23 +22,38 @@ export default function Page() {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen">
+  <motion.div
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.3, delay: 1 } // 1-second delay
+    }}
+  >
       {isCardVisible && (
-        <Card className="pl-16 pr-20 relative mb-5 bg-[rgba(0,0,0,0.7)]">
-          <button
-            onClick={handleRemoveCard}
-            className="absolute top-2 right-2 p-0.5 bg-red-500 text-white rounded-full cursor-pointer hover:bg-red-600"
-          >
-            X
-          </button>
-          <CardHeader>
-            <CardTitle className="pl-5 pt-5">Demo Preview:</CardTitle>
-            <CardDescription className="p-5">
-                Email: demo@demo.com
-                <br />
-                Password: 1234
-            </CardDescription>
-          </CardHeader>
-        </Card>
+    
+  <Card className="border-0	rounded-[20px] pr-20 relative mb-5 bg-[rgba(0,0,0,0.7)]">
+    <button
+      onClick={handleRemoveCard}
+      className="absolute top-4 right-3.5 p-0.5 cursor-pointer ease-in-put  hover:scale-110 duration-300"
+    >
+      <Image
+        alt=""
+        height="13"
+        src="/images/close.png"
+        width="13"
+      />
+    </button>
+    <CardHeader>
+      <CardTitle className="pl-5 pt-5">Demo Preview:</CardTitle>
+      <CardDescription className="p-5">
+        Email: demo@demo.com
+        <br />
+        Password: 1234
+      </CardDescription>
+    </CardHeader>
+  </Card>
+
       )}
       <SignIn
         appearance={{
@@ -60,6 +78,7 @@ export default function Page() {
           },
         }}
       />
+      </motion.div>
     </div>
   );
 }

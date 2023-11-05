@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { useAuth } from "@clerk/nextjs";
+import './style.css';
+
+
 
 
 const LandingPage = () => {
