@@ -51,7 +51,7 @@ const LandingPage = () => {
 
         <link href="/manifest.json" rel="manifest" />
         <div id="__next">
-          <div style={{}} />
+          <div/>
           <header className="Header_header__pXml_" data-light-theme="false">
             <Image
               alt="Logo"
@@ -190,7 +190,14 @@ const LandingPage = () => {
                           </a>
                         </div>
                       </div>
-
+                      <div className="mockup">
+                      <Image
+                        alt="logo1"
+                        height="100"
+                        src="/images/iphone15pro.png"
+                        width="250"
+                      />
+                      </div>
                       <div className="Hero_aspectWrapper"></div>
                     </div>
                   </div>
