@@ -3,15 +3,11 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { useAuth } from "@clerk/nextjs";
-import './style.css';
-
-
-
+import "./style.css";
 
 const LandingPage = () => {
   const [backgroundClassName] = useState("background-container");
   const { isSignedIn } = useAuth();
-
 
   return (
     <div className="auth-layout">
@@ -34,27 +30,16 @@ const LandingPage = () => {
         />
         <meta content="#ee33ee" name="theme-color" />
         <link href="images/Logo(s).svg" rel="icon" type="image/png" />
-        <link data-n-g="" href="css/style2.css" rel="stylesheet" />
-        <link data-n-p="" href="css/style.css" rel="stylesheet" />
+
         <meta content="23" name="next-head-count" />
         <meta
           content="no-store, no-cache, must-revalidate"
           httpEquiv="Cache-Control"
         />
-        <link
-          as="font"
-          crossOrigin="anonymous"
-          href="fonts/font1.woff2"
-          rel="preload"
-          type="font/woff2"
-        />
-        <link as="style" href="css/style2.css" rel="preload" />
-
-        <link as="style" href="css/style.css" rel="preload" />
 
         <link href="/manifest.json" rel="manifest" />
         <div id="__next">
-          <div/>
+          <div />
           <header className="Header_header__pXml_" data-light-theme="false">
             <Image
               alt="Logo"
@@ -130,7 +115,7 @@ const LandingPage = () => {
                 data-pulse="false"
                 data-size="regular"
                 data-type="transparent"
-                href={isSignedIn? "/dashboard" : "/sign-in"}
+                href={isSignedIn ? "/dashboard" : "/sign-in"}
               >
                 Log in
               </a>
@@ -139,7 +124,7 @@ const LandingPage = () => {
                 data-pulse="false"
                 data-size="regular"
                 data-type="primary"
-                href={isSignedIn? "/dashboard" : "/sign-up"}
+                href={isSignedIn ? "/dashboard" : "/sign-up"}
               >
                 Sing Up
               </a>
@@ -177,7 +162,7 @@ const LandingPage = () => {
                             data-pulse="false"
                             data-size="large"
                             data-type="primary"
-                            href={isSignedIn? "/dashboard" : "/sign-in"}
+                            href={isSignedIn ? "/dashboard" : "/sign-in"}
                           >
                             Explore Demo
                           </a>
@@ -186,7 +171,7 @@ const LandingPage = () => {
                             data-pulse="false"
                             data-size="large"
                             data-type="transparent"
-                            href={isSignedIn? "/dashboard" : "/sign-up"}
+                            href={isSignedIn ? "/dashboard" : "/sign-up"}
                             target="_blank"
                           >
                             Try for free
@@ -194,12 +179,12 @@ const LandingPage = () => {
                         </div>
                       </div>
                       <div className="mockup">
-                      <Image
-                        alt="logo1"
-                        height="510"
-                        src="/images/iphone15pro.png"
-                        width="250"
-                      />
+                        <Image
+                          alt="logo1"
+                          height="510"
+                          src="/images/iphone15pro.png"
+                          width="250"
+                        />
                       </div>
                       <div className="Hero_aspectWrapper"></div>
                     </div>
