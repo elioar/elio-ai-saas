@@ -47,9 +47,9 @@ export default function Page() {
     <CardHeader>
       <CardTitle className="pl-5 pt-5">Demo Preview:</CardTitle>
       <CardDescription className="p-5">
-        Email: demo@demo.com
+        Email: <b>demo@demo.com</b>
         <br />
-        Password: 1234
+        Password: <b>1234</b>
       </CardDescription>
     </CardHeader>
   </Card>

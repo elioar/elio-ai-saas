@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { useAuth } from "@clerk/nextjs";
 import "./style.css";
+import { motion } from "framer-motion";
 
 const LandingPage = () => {
   const [backgroundClassName] = useState("background-container");
@@ -119,15 +120,20 @@ const LandingPage = () => {
               >
                 Log in
               </a>
-              <a
-                className="Button_container__i_Vit"
-                data-pulse="false"
-                data-size="regular"
-                data-type="primary"
-                href={isSignedIn ? "/dashboard" : "/sign-up"}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.9 }}
               >
-                Sing Up
-              </a>
+                <a
+                  className="Button_container__i_Vit"
+                  data-pulse="false"
+                  data-size="regular"
+                  data-type="primary"
+                  href={isSignedIn ? "/dashboard" : "/sign-up"}
+                >
+                  Sign Up
+                </a>
+              </motion.button>
               <button
                 className="Header_hamburger__X_hhy"
                 aria-label="Open Menu"
@@ -157,15 +163,21 @@ const LandingPage = () => {
                         </p>
 
                         <div>
-                          <a
-                            className="Button_container__i_Vit"
-                            data-pulse="false"
-                            data-size="large"
-                            data-type="primary"
-                            href={isSignedIn ? "/dashboard" : "/sign-in"}
+                          <motion.button
+                            whileHover={{ scale: 1.03 }}
+                            whileTap={{ scale: 0.9 }}
                           >
-                            Explore Demo
-                          </a>
+                            <a
+                              className="Button_container__i_Vit"
+                              data-pulse="false"
+                              data-size="large"
+                              data-type="primary"
+                              href={isSignedIn ? "/dashboard" : "/sign-in"}
+                            >
+                              Explore Demo
+                            </a>
+                          </motion.button>
+
                           <a
                             className="Button_container__i_Vit"
                             data-pulse="false"
@@ -174,7 +186,7 @@ const LandingPage = () => {
                             href={isSignedIn ? "/dashboard" : "/sign-up"}
                             target="_blank"
                           >
-                            Try for free
+                            Join Now
                           </a>
                         </div>
                       </div>
@@ -298,13 +310,12 @@ const LandingPage = () => {
                           } as React.CSSProperties
                         }
                       >
-                        Why trust us?
+                        Why use AI?
                       </h2>
 
                       <p className="Features_subHeading__N7HnS">
-                        Evervault is secure by default. We build, manage, and
-                        implement security best practices into the platform so
-                        you don&apos;t have to.
+                        Explore the AI advantage: Unlock the potential of
+                        artificial intelligence to improve your results.
                       </p>
                     </div>
 
@@ -318,7 +329,7 @@ const LandingPage = () => {
                           <div>
                             <div className="Features_featureTitle__oyjT_">
                               <svg
-                                className="lucide lucide-cog"
+                                className="your-chat-icon-class"
                                 fill="none"
                                 height="24"
                                 stroke="currentColor"
@@ -329,48 +340,23 @@ const LandingPage = () => {
                                 width="16"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
-                                <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" />
-
-                                <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
-
-                                <path d="M12 2v2" />
-
-                                <path d="M12 22v-2" />
-
-                                <path d="m17 20.66-1-1.73" />
-
-                                <path d="M11 10.27 7 3.34" />
-
-                                <path d="m20.66 17-1.73-1" />
-
-                                <path d="m3.34 7 1.73 1" />
-
-                                <path d="M14 12h8" />
-
-                                <path d="M2 12h2" />
-
-                                <path d="m20.66 7-1.73 1" />
-
-                                <path d="m3.34 17 1.73-1" />
-
-                                <path d="m17 3.34-1 1.73" />
-
-                                <path d="m11 13.73-4 6.93" />
+                                <path d="M15 3H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11l4 3V5a2 2 0 0 0-2-2z" />
                               </svg>
 
-                              <h3>Fundamentally Configurable</h3>
+                              <h3>AI Chat</h3>
                             </div>
 
                             <p>
-                              Evervault products work together and can be
-                              adapted to any type of solution.
+                              Personalize interactions with our AI
+                              chatbot.Customize AI chat interactions for
+                              engaging conversations.
                             </p>
                           </div>
 
                           <div>
                             <div className="Features_featureTitle__oyjT_">
                               <svg
-                                className="lucide lucide-timer"
+                                className="lucide lucide-image"
                                 fill="none"
                                 height="24"
                                 stroke="currentColor"
@@ -381,26 +367,33 @@ const LandingPage = () => {
                                 width="16"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
-                                <line x1="10" x2="14" y1="2" y2="2" />
+                                <rect
+                                  x="3"
+                                  y="3"
+                                  width="18"
+                                  height="18"
+                                  rx="2"
+                                  ry="2"
+                                />
 
-                                <line x1="12" x2="15" y1="14" y2="11" />
+                                <circle cx="8.5" cy="8.5" r="1.5" />
 
-                                <circle cx="12" cy="14" r="8" />
+                                <polyline points="21 15 16 10 5 21" />
                               </svg>
 
-                              <h3>Ultra-Low Latency</h3>
+                              <h3>Image Generation</h3>
                             </div>
 
                             <p>
-                              Encryption and decryption operations introduce a
-                              minimal latency penalty.
+                              Effortlessly craft captivating visuals with our
+                              user-friendly AI image generator.
                             </p>
                           </div>
 
                           <div>
                             <div className="Features_featureTitle__oyjT_">
                               <svg
-                                className="lucide lucide-git-merge"
+                                className="lucide lucide-code"
                                 fill="none"
                                 height="24"
                                 stroke="currentColor"
@@ -411,19 +404,19 @@ const LandingPage = () => {
                                 width="16"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
-                                <circle cx="18" cy="18" r="3" />
+                                <polyline points="16 18 22 12 16 6" />
 
-                                <circle cx="6" cy="6" r="3" />
+                                <polyline points="8 6 2 12 8 18" />
 
-                                <path d="M6 21V9a9 9 0 0 0 9 9" />
+                                <line x1="12" x2="12" y1="2" y2="22" />
                               </svg>
 
-                              <h3>Write and Deploy in Seconds</h3>
+                              <h3>Code Generation</h3>
                             </div>
 
                             <p>
-                              Built so developers spend less time and money on
-                              data security and compliance.
+                              Generate code snippets for your projects
+                              efficiently.
                             </p>
                           </div>
                         </div>
@@ -435,6 +428,64 @@ const LandingPage = () => {
                         <div className="Features_divider__1WGjU" />
 
                         <div className="Features_features__aEjtw">
+                          <div>
+                            <div className="Features_featureTitle__oyjT_">
+                              <svg
+                                className="lucide lucide-video"
+                                fill="none"
+                                height="24"
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                viewBox="0 0 24 24"
+                                width="16"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <polygon points="23 7 16 12 23 17 23 7" />
+
+                                <rect height="14" width="14" x="1" y="5" />
+                              </svg>
+
+                              <h3>Video Generation</h3>
+                            </div>
+
+                            <p>
+                              Streamline video production with our user-friendly
+                              tools, creating stunning and polished videos
+                              effortlessly.
+                            </p>
+                          </div>
+
+                          <div>
+                            <div className="Features_featureTitle__oyjT_">
+                              <svg
+                                className="your-music-icon-class"
+                                fill="none"
+                                height="24"
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                viewBox="0 0 24 24"
+                                width="16"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path d="M9 18V5l12-2v13" />
+                                <circle cx="6" cy="18" r="3" />
+                                <circle cx="18" cy="16" r="3" />
+                              </svg>
+
+                              <h3>Music Generation</h3>
+                            </div>
+
+                            <p>
+                              Effortlessly compose music that perfectly
+                              complements your content, tailored to your unique
+                              style and needs.
+                            </p>
+                          </div>
+
                           <div>
                             <div className="Features_featureTitle__oyjT_">
                               <svg
@@ -452,72 +503,12 @@ const LandingPage = () => {
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                               </svg>
 
-                              <h3>Dual Security Model</h3>
+                              <h3>Security</h3>
                             </div>
 
                             <p>
-                              We store encryption keys, you store data as you
-                              normally would — but fully encrypted.
-                            </p>
-                          </div>
-
-                          <div>
-                            <div className="Features_featureTitle__oyjT_">
-                              <svg
-                                className="lucide lucide-file-check"
-                                fill="none"
-                                height="24"
-                                stroke="currentColor"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                viewBox="0 0 24 24"
-                                width="16"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-
-                                <polyline points="14 2 14 8 20 8" />
-
-                                <path d="m9 15 2 2 4-4" />
-                              </svg>
-
-                              <h3>Compliance</h3>
-                            </div>
-
-                            <p>
-                              We’re fully compliant under PCI DSS, HIPAA, GDPR
-                              and SOC2.
-                            </p>
-                          </div>
-
-                          <div>
-                            <div className="Features_featureTitle__oyjT_">
-                              <svg
-                                className="lucide lucide-box"
-                                fill="none"
-                                height="24"
-                                stroke="currentColor"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                viewBox="0 0 24 24"
-                                width="16"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-
-                                <polyline points="3.29 7 12 12 20.71 7" />
-
-                                <line x1="12" x2="12" y1="22" y2="12" />
-                              </svg>
-
-                              <h3>Enclave-backed</h3>
-                            </div>
-
-                            <p>
-                              Built on isolated, hardened, and highly
-                              constrained secure enclaves.
+                              Your data is fully secured and private with our
+                              robust security measures.
                             </p>
                           </div>
                         </div>
@@ -532,7 +523,7 @@ const LandingPage = () => {
                           <div>
                             <div className="Features_featureTitle__oyjT_">
                               <svg
-                                className="lucide lucide-cpu"
+                                className="your-lightning-icon-class"
                                 fill="none"
                                 height="24"
                                 stroke="currentColor"
@@ -543,99 +534,69 @@ const LandingPage = () => {
                                 width="16"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
-                                <rect
-                                  height="16"
-                                  rx="2"
-                                  width="16"
+                                <path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z" />
+                              </svg>
+
+                              <h3>Fast AI</h3>
+                            </div>
+
+                            <p>
+                              Experience our AI's remarkable speed, providing
+                              quick and efficient results.{" "}
+                            </p>
+                          </div>
+
+                          <div>
+                            <div className="Features_featureTitle__oyjT_">
+                              <svg
+                                className="your-puzzle-piece-icon-class"
+                                fill="none"
+                                height="24"
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                viewBox="0 0 24 24"
+                                width="16"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path d="M18 2a2 2 0 0 0-2 2h-1.18a2 2 0 0 0-1.09.32l-2.85 1.9-2.62-1.94a4 4 0 0 0-4.12 0L6.12 6.22a4 4 0 0 0-2.07-.57H3a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1.09a4 4 0 0 0-.32-1.09l-1.9-2.85 1.94-2.62a4 4 0 0 0 0-4.12l-1.94-2.62 1.9-2.85a4 4 0 0 0 .32-1.09z" />
+                              </svg>
+
+                              <h3>Intelligent AI</h3>
+                            </div>
+
+                            <p>
+                              Embrace smart AI that adapts and learns to enhance
+                              your experience.
+                            </p>
+                          </div>
+
+                          <div>
+                            <div className="Features_featureTitle__oyjT_">
+                              <svg
+                                className="your-dollar-icon-class"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                              >
+                                <text
                                   x="4"
-                                  y="4"
-                                />
-
-                                <rect height="6" width="6" x="9" y="9" />
-
-                                <path d="M15 2v2" />
-
-                                <path d="M15 20v2" />
-
-                                <path d="M2 15h2" />
-
-                                <path d="M2 9h2" />
-
-                                <path d="M20 15h2" />
-
-                                <path d="M20 9h2" />
-
-                                <path d="M9 2v2" />
-
-                                <path d="M9 20v2" />
+                                  y="18"
+                                  fontSize="16"
+                                  fill="currentColor"
+                                >
+                                  $
+                                </text>
                               </svg>
 
-                              <h3>Volume</h3>
+                              <h3>Low Price</h3>
                             </div>
 
                             <p>
-                              Evervault processes millions of encryption
-                              operations every day.
-                            </p>
-                          </div>
-
-                          <div>
-                            <div className="Features_featureTitle__oyjT_">
-                              <svg
-                                className="lucide lucide-globe2"
-                                fill="none"
-                                height="24"
-                                stroke="currentColor"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                viewBox="0 0 24 24"
-                                width="16"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path d="M21.54 15H17a2 2 0 0 0-2 2v4.54" />
-
-                                <path d="M7 3.34V5a3 3 0 0 0 3 3v0a2 2 0 0 1 2 2v0c0 1.1.9 2 2 2v0a2 2 0 0 0 2-2v0c0-1.1.9-2 2-2h3.17"></path>
-
-                                <path d="M11 21.95V18a2 2 0 0 0-2-2v0a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2h3.05" />
-
-                                <circle cx="12" cy="12" r="10" />
-                              </svg>
-
-                              <h3>Globally Distributed</h3>
-                            </div>
-
-                            <p>
-                              Evervault resources are deployed in multiple
-                              regions to optimize uptime.
-                            </p>
-                          </div>
-
-                          <div>
-                            <div className="Features_featureTitle__oyjT_">
-                              <svg
-                                className="lucide lucide-line-chart"
-                                fill="none"
-                                height="24"
-                                stroke="currentColor"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                viewBox="0 0 24 24"
-                                width="16"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path d="M3 3v18h18" />
-
-                                <path d="m19 9-5 5-4-4-3 3" />
-                              </svg>
-
-                              <h3>Scalable Pricing</h3>
-                            </div>
-
-                            <p>
-                              Affordable, scalable pricing where you only get
-                              charged for what you use.
+                              Enjoy our cost-effective pricing model for your
+                              budget-friendly needs.
                             </p>
                           </div>
                         </div>
@@ -652,12 +613,11 @@ const LandingPage = () => {
                         }
                       >
                         <h3 className="styles_text__Fvsk7">
-                          Encrypt, Process, Share.
+                        Leverage, Appreciate   , Share.
                         </h3>
 
                         <p>
-                          The encryption platform for developers who have better
-                          ways to spend their time.
+                        Leverage the power of AI, appreciate its benefits, and promote it with others.
                         </p>
 
                         <div>
@@ -666,18 +626,18 @@ const LandingPage = () => {
                             data-pulse="false"
                             data-size="large"
                             data-type="primary"
-                            href="https://elio-ai-saas.vercel.app/sign-in?redirect_url=https%3A%2F%2Felio-ai-saas.vercel.app%2Fdashboard"
+                            href={isSignedIn ? "/dashboard" : "/sign-in"}
                           >
-                            Request a demo
+                            Explore Demo
                           </a>
                           <a
                             className="Button_container__i_Vit"
                             data-pulse="false"
                             data-size="large"
                             data-type="transparent"
-                            href="https://elio-ai-saas.vercel.app/sign-in?redirect_url=https%3A%2F%2Felio-ai-saas.vercel.app%2Fdashboard"
+                            href="https://elio-ai-saas.vercel.app"
                           >
-                            Try for free
+                            Share
                           </a>
                         </div>
                       </div>
