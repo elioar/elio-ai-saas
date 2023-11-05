@@ -541,7 +541,7 @@ const LandingPage = () => {
                             </div>
 
                             <p>
-                              Experience our AI's remarkable speed, providing
+                              Experience our AI&apos;s remarkable speed, providing
                               quick and efficient results.{" "}
                             </p>
                           </div>
